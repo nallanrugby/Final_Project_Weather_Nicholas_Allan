@@ -1,17 +1,22 @@
 Ten minute plan 
 
-[#Talia's comment are entered like this with a [# ...] inside the text.
+
+The goals of this project are to find what variables in weather interact with each other and hopefully to create weather simulator that will be able to accurately predict one of the 6 measured variables. These variables that I am using in this project are temperature, relative humidity, rainfall , wind direction, wind speed,  gust speed. To do this I am seeking to find trends between these variables. This means if one variable spikes does it affect the other variables in a repeatable pattern.  Once these trends are found I would like to use statistical analysis to calculate possible mathematical tends or equations that can begin predicting outcomes.  This will create the basses of my weather simulator and hopefully will lead me to  a more accurate answer. 
 
 
-The goals of this project are to find what variables in weather interact with each other and hopefully to create a small/short term weather simulator. [# What sort of weather variables are you looking to simulate? What counts as "short term"?]  To do this I am seeking to find trends between variables. This means if one variable spikes does it affect the other variables in a repeatable pattern.  Once these trends are found I would like to use statistical analysis to calculate possible mathematical tends or equations that can begin predicting outcomes.  This will create the basses of my weather simulator and hopefully will lead me to more accurate answer.  My goals for my simulator is to be able to accurately predict one of my six measured variables. 
+For now in my ipythone notebook I have created graphs showing visual data about the variables. I plotted every single variable along side a temperature graph.  I did this because I decided that I should focus on trying to predict one variable before creating a simulator that can predict any variable.  These sides by side graphs give a good visual key to see which variable react in the same way or at the same time. 
 
-[#Looking for what kind of stats or math tests or relationships can help provide a more clear framework for what scripts you'll need to write to create your weather simulator.]
- 
-For now I need help figuring out one specific problem in one of python notebooks. This notebook in found in the bin directory named as final_project_code. 
 
-[# I tried working on your problem, unsucessfully. Having a clear question for why you wrote the test would help the reader fix your problem. Maybe you have an idea of this question--including it in your script would help commentors.]
+I have been for the last couple days stuck with deciding what type of stats to us in calculating the relation ships between my variables. Considering I do not have control of any of variables and that I am seeking to find a relationship between them I understand that I need to use correlation analysis but fail to properly find the right test to run for this.  
 
-For some reason when I try to run some statistical functions in my code I receive an error that says my variable doesn't exist but when I run plot functions that variable seems to work.  I haven’t specified which variables this happens for because it seems the problem can be found through out the data frame. 
 
-[#Great introduction and clear statement of goal. More details on how computational methods will be used would help. Also, some bullets about each chunk of script of code throughout your project would help the reader know where to look in your root directory for all the relevant items a viewer may want. Including questions as you go, not just your overal scientific question, can help guide the creator and reader as to what you're trying to figure out/solve/create with each line of code helps fix bugs. Overall, this looks like a well-thoughout project with good scope. It's clear you have a great grasp of Python coding for data management. Clearly planning out your process in English beforehand and throughout may help you have simpler, easier to fix, scripts.]
- 
+Another aspect of my code that I would like someone’s opinion on is the efficiency of my code. Where can I add functions or loop so that I limit my code being repeated. 
+
+
+
+
+
+
+
+  
+
