@@ -57,7 +57,6 @@ def plot(data, savename):
         
 
 
-
 main()
 
 

@@ -7,8 +7,7 @@ The goals of this project are to find what variables in weather interact with ea
 For now in my ipythone notebook I have created graphs showing visual data about the variables. I plotted every single variable along side a temperature graph.  I did this because I decided that I should focus on trying to predict one variable before creating a simulator that can predict any variable.  These sides by side graphs give a good visual key to see which variable react in the same way or at the same time. 
 
 
-I have been for the last couple days stuck with deciding what type of stats to us in calculating the relation ships between my variables. Considering I do not have control of any of variables and that I am seeking to find a relationship between them I understand that I need to use correlation analysis but fail to properly find the right test to run for this.  
-
+im having issues with the script that is named as Graph_maker.py in the bin directory. the issue is that i can not get the script to save the figures after running the plot aspect of the program. i think the problem lies with my loop that i created so that i could create graphs automatically in stead of activity writing the code for each graph. 
 
 Another aspect of my code that I would like someone’s opinion on is the efficiency of my code. Where can I add functions or loop so that I limit my code being repeated. 
 
