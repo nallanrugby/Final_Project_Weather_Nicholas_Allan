@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 
 
 def main():
-
-
      
     #output variables
 	output_file = sys.argv[2]
@@ -30,10 +28,12 @@ def main():
 	data['Date_Time']= pd.to_datetime(data['Date_Time'])
 
 	#print data
-	plot(data, output_file)
+	plot_fin = plot(data, output_file) #once this is connected to the for loop, it should work
 
+	#save the plot	
+	plt.savefig(plot_fin)
 
-def plot(data, savename):
+def plot_function(data):
 
 	for y in range(2,6):
 	
@@ -49,13 +49,8 @@ def plot(data, savename):
     #add axis lables 
 		plt.ylabel(data[y])	
 		plt.xlabel ('Date Time')
-    
-		plt.show()
-            
-	#save the plot	
-		plt.savefig(str(y) + "_" + savename)
-        
-
+	
+		return plot() #not sure how to save this as a variable!
 
 main()
 
