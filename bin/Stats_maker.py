@@ -14,7 +14,7 @@ import statsmodels.api as sm
 import scipy
 
 def main():
-     
+	'''add comment'''
     #output variables
 	output_file = sys.argv[2]
 	
@@ -31,21 +31,29 @@ def main():
 	#make sure that Date Time column is seen as a value of datetime
 	data['Date_Time']= pd.to_datetime(data['Date_Time'])
 
-	#print data
+	#call stats test 
+	a = spearman_test(data['Wind_direction'], data['Temperature'])
+
+	b = spearman_test(data['Wind_speed'], data['Temperature'])
+
+	c = spearman_test(data['Gust_speed'], data['Temperature'])
+
+	d = spearman_test(data['Relative_humidity'], data['Temperature'])
+
+	e = spearman_test(data['Rainfall'], data['Temperature'])
 	
-	spearman_test(data['Wind_direction'], data['Temperature'], output_file)
-
-	spearman_test(data['Wind_speed'], data['Temperature'], output_file)
-
-	spearman_test(data['Gust_speed'], data['Temperature'], output_file)
-
-	spearman_test(data['Relative_humidity'], data['Temperature'], output_file)
-
-	spearman_test(data['Rainfall'], data['Temperature'], output_file)
+	stats_dataframe = pd.DataFrame({'formula':['Temperature vs Rainfall' ,'Temperature vs Relative Humidity', 'Temperature vs Gust Speed', 'Temperature vs Wind Speed','Temperature vs Wind Direction'], 'pvalue':[e[0], d[0], c[0],b[0], a[0]], 'rho':[e[1],d[1], c[1],b[1],a[1]]})
 	
-def spearman_test(stat_data, x_value,  savename):
+	stats_dataframe.to_csv('../results_figures/tables/'+ output_file +'_' + 'Temperature_vs_Variables '+'.csv')
+	
+def spearman_test(stat_data, x_value):
     
     #run test
-	scipy.stats.spearmanr(x_value , stat_data) 
+    answer =scipy.stats.spearmanr(x_value , stat_data) 
+    pvalue = answer[1]
+    rho = answer[0]
+    return pvalue, rho
+    
+
 	
 main()

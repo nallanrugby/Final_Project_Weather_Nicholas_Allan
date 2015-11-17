@@ -78,10 +78,11 @@ def plot(plot_data, x_axis, savename):
 		#plt.show()
             
 	#save the plot	
-	plt.savefig(savename+ '_' + plot_data.name +'_'+ 'vs' +'_'+ x_axis.name + '.pdf')
+	plt.savefig('../results_figures/graphs/'+ savename+ '_' + plot_data.name +'_'+ 'vs' +'_'+ x_axis.name + '.pdf')
     
+    #close functions so they do not output on top of each other 
 	plt.close()
-	#plt.clf()
+	
 
 
 main()
