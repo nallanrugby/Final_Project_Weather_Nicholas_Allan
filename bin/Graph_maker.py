@@ -1,6 +1,12 @@
 #Nicholas Allan 2015-11-16
-#this document is where my graphs will be produced. 
+# this document is where my graphs will be produced. 
 # data used must but in order of number test, date_time of test, rainfall, temperature , relative humidity, wind direction, wind speed, wind gust.  
+# Data must have delimiter of , for this program. 
+# To run this file you must run it with python. 
+# In the command line should look like this $ python Graph_maker.py input_file output_file
+# input_file = to the data that you want uploaded 
+# output_file = what you want the data frame to be saved under. 
+
 
 # loading libraries that help load or graph data
 import sys
@@ -12,8 +18,7 @@ import random
 
 def main():
 
-
-     
+	'''This function will clean the data and call the plot function to run versus the chosen varaibles'''
     #output variables
 	output_file = sys.argv[2]
 	
@@ -58,6 +63,8 @@ def main():
 
 
 def plot(plot_data, x_axis, savename):
+	
+	'''this function will create the scatterplot graphs for above variables, it will also add x and y labels and titile to these graphs'''
 
 	#produce random colors for graphs markers
 	r = lambda: random.randint(0,255)
@@ -75,7 +82,6 @@ def plot(plot_data, x_axis, savename):
 	plt.ylabel(plot_data.name)	
 	plt.xlabel (x_axis.name)
     
-		#plt.show()
             
 	#save the plot	
 	plt.savefig('../results_figures/graphs/'+ savename+ '_' + plot_data.name +'_'+ 'vs' +'_'+ x_axis.name + '.pdf')

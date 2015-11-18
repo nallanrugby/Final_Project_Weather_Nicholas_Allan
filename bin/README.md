@@ -1,8 +1,2 @@
-in this file you find both my frame work programs done on python notebook 
-and other progams done in a text editor. 
-
-the pythone note book programs are made up to answer spefic questions or 
-to create case spefic diagrams. 
-
-other programs will be for eiter predicting out comes or fro genarl use
-for the entire dataframe. 
+in this file you find the programs that were disgned for this project. these programs are the Graph_maker.py file and the Stats_maker.py file 
+you will also find the case specific Main_script.sh file. this was created so that my results are repeatable. the other file may be used for other project but the Main script file will not work for other project unless actively changed.  
